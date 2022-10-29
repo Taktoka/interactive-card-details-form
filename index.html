@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cairo:wght@300;400;500;600;700&family=Fraunces:opsz,wght@9..144,700&family=Gulzar&family=Inter:wght@400;700;800&family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400;500;600;700&family=Outfit:wght@100;300;500&family=Plus+Jakarta+Sans:wght@300;500;800&family=Raleway:wght@100;300;400;500;600;700&family=Roboto:wght@400;500;700&family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>interactive card details form</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="bg-image"></div>
+      <div class="bg-image mobile"></div>
+      <div class="card-body">
+        <form class="form" action="#completed-page" method="get">
+          <div class="name">
+            <label for="name"> Cardholder Name</label>
+            <input
+              class="input-name"
+              type="text"
+              id="name"
+              placeholder="e.g. Jane Appleseed"
+            />
+          </div>
+          <p
+            class="error-name"
+            style="
+              font-size: 10px;
+              color: var(--red);
+              margin-bottom: 10px;
+              display: none;
+            "
+          >
+            Field required
+          </p>
+          <div class="number">
+            <label for="num">Card Number</label>
+            <input
+              class="input-num"
+              type="text"
+              maxlength="19"
+              id="num"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+          </div>
+          <p
+            class="error-num"
+            style="
+              font-size: 10px;
+              color: var(--red);
+              margin-bottom: 10px;
+              display: none;
+            "
+          >
+            Field required
+          </p>
+          <div class="date-field">
+            <div class="date-month">
+              <label for="month">Exp.Date</label>
+              <input
+                class="input-month"
+                type="text"
+                id="month"
+                maxlength="2"
+                placeholder="MM"
+              />
+              <p
+                class="error-month"
+                style="
+                  font-size: 10px;
+                  color: var(--red);
+                  margin-right: 10px;
+                  margin-top: 5px;
+                  display: none;
+                "
+              >
+                Field required
+              </p>
+            </div>
+
+            <div class="date-year">
+              <label for="year">(MM/YY)</label>
+              <input
+                class="input-year"
+                type="text"
+                id="year"
+                maxlength="2"
+                placeholder="YY"
+              />
+              <p
+                class="error-year"
+                style="
+                  font-size: 10px;
+                  color: var(--red);
+                  margin-top: 5px;
+                  display: none;
+                "
+              >
+                Field required
+              </p>
+            </div>
+
+            <div class="card-verification">
+              <label for="cvc">CVC</label>
+              <input
+                class="input-cvc"
+                type="text"
+                id="cvc"
+                maxlength="3"
+                placeholder="e.g. 123"
+              />
+              <p
+                class="error-cvc"
+                style="
+                  font-size: 10px;
+                  color: var(--red);
+                  display: none;
+                  margin-top: 5px;
+                "
+              >
+                Field required
+              </p>
+            </div>
+          </div>
+          <input class="confirm" type="submit" value="Confirm" />
+        </form>
+      </div>
+      <div class="thanks" id="completed-page">
+        <img src="/images/icon-complete.svg" alt="" class="icon" />
+        <h2>Thank You!</h2>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
+      <div class="front">
+        <div class="logo">
+          <img src="/images/card-logo.svg" alt="" />
+        </div>
+        <div class="info">
+          <p class="serial">0000 0000 0000 0000</p>
+          <div class="person">
+            <p class="id">Jane Appleseed</p>
+            <div class="time">
+              <p class="time-month">00</p>
+              <p>/</p>
+              <p class="time-year">00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="back">
+        <p class="cvc-num">000</p>
+      </div>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
